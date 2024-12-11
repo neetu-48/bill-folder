@@ -131,7 +131,9 @@ img[alt="img"] {
     max-width: 612px;
     padding-top: 110px;
 }
-
+.pr-80{
+    padding-right: 80px;
+}
 .heading {
     font-family: "Helvetica", sans-serif;
     font-size: 64px;
