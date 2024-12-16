@@ -56,7 +56,7 @@
      background-repeat: no-repeat;
      background-size: 100% 810px;
      padding-top: 20px;
-     
+
  }
 
  .background-image ul {
@@ -256,6 +256,9 @@
  }
 
  /* logo-section */
+ .logo-section{
+    overflow: auto;
+ }
  .gap-90 {
      gap: 90px;
  }
@@ -820,32 +823,25 @@
      .mb-sm-0 {
          margin-bottom: 0;
      }
-     .gap-90{
-        gap: 60px;
-     }
-
  }
-
- /* @media (max-width:991px){
-     .background-image {
-         background-size: 100% 2000px;
-     }
- } */
 
  @media (max-width:992px) {
      .container {
          flex-direction: column;
      }
-     .sub-heading{
-        color: white;
+
+     .sub-heading {
+         color: white;
      }
 
      .background-image {
          background-size: 100% 2163px;
      }
+
      .logo-section {
          overflow: auto;
          white-space: nowrap;
+         margin-top: 71px;
      }
 
      input[type="text"][id="text"] {
