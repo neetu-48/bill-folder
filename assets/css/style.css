@@ -64,8 +64,7 @@
  }
 
  .background-image ul li a:hover {
-     color: black;
-     background-color: aqua;
+     text-decoration: underline;
      padding: 15px;
      border-radius: 20px;
 
@@ -135,7 +134,7 @@
  }
 
  .get-btn:hover {
-     background-color: aqua;
+     background-color: rgb(227, 122, 122);
      position: relative;
      z-index: 1;
  }
@@ -200,7 +199,7 @@
  }
 
  .compare-btn:hover {
-     background-color: red;
+     background-color: rgb(227, 122, 122);
  }
 
  input[type="text"][id="text"] {
@@ -256,9 +255,10 @@
  }
 
  /* logo-section */
- .logo-section{
-    overflow: auto;
+ .logo-section {
+     overflow: auto;
  }
+
  .gap-90 {
      gap: 90px;
  }
@@ -299,6 +299,7 @@
      color: var(--Deep-Blue, rgba(0, 23, 31, 1));
      opacity: 90%;
      padding-top: 16px;
+     max-width: 558px;
  }
 
  .energy-plan {
@@ -345,7 +346,7 @@
  }
 
  .compare-us:hover {
-     background-color: red;
+     background-color: rgb(227, 122, 122);
  }
 
  .col-5 {
@@ -360,14 +361,17 @@
      padding-right: 12px;
  }
 
- /* simple-section */
+ /* simple-section*/
 
  .simple-section {
      padding-bottom: 162px;
- }
-
- .simple-section .container {
-     max-width: 1440px;
+     /* max-width: 1920px; */
+     width: 100%;
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
  }
 
  .heading-simple {
@@ -393,9 +397,6 @@
  }
 
  .card {
-     height: 661px;
-     max-width: 360px;
-     width: 100%;
      overflow: hidden;
      position: relative;
      background: rgba(234, 249, 255, 0.94);
@@ -411,9 +412,6 @@
  }
 
  .card-2 {
-     height: 661px;
-     max-width: 360px;
-     width: 100%;
      overflow: hidden;
      position: relative;
      background: rgba(234, 249, 255, 0.94);
@@ -429,9 +427,6 @@
  }
 
  .card-3 {
-     height: 661px;
-     max-width: 360px;
-     width: 100%;
      overflow: hidden;
      position: relative;
      background: rgba(234, 249, 255, 0.94);
@@ -447,9 +442,6 @@
  }
 
  .card-4 {
-     height: 661px;
-     max-width: 360px;
-     width: 100%;
      overflow: hidden;
      position: relative;
      background: rgba(234, 249, 255, 0.94);
@@ -637,123 +629,195 @@
      visibility: visible;
  }
 
+ /* .flex-wrap {
+     flex-wrap: wrap;
+ } */
+
  /* comprehensive */
  .comprehensive {
-     min-height: 100vh;
-     background-color: blue;
- }
-
- .comprehensive ul {
-     list-style: none;
- }
-
- .comparisons {
      font-family: "Helvetica", sans-serif;
      font-size: 48px;
      font-weight: 400;
      line-height: 52.8px;
      color: var(--Deep-Blue, rgba(0, 23, 31, 1));
      max-width: 456px;
+     padding-bottom: 46px;
+ }
+
+ .tab {
+     /* max-width: 558px; */
+     width: 100%;
+     position: relative;
+     border: 1px solid rgba(0, 0, 0, 0.1);
+     margin-bottom: 24px;
+     border-radius: 4px;
+     padding-top: 33px;
+     padding-bottom: 33px;
+     padding-left: 14px;
+     padding-right: 14px;
+ }
+
+ .tab:hover {
+     box-shadow: 0px 0px 13.9px 0px rgba(0, 0, 0, 0.1);
+ }
+
+ .icon {
+     position: absolute;
+     top: 13%;
+     left: 8%;
+     transform: translateX(-50%);
+ }
+
+ .tab input {
+     position: absolute;
+     opacity: 0;
+     z-index: -1;
+ }
+
+ .tab__content {
+     max-height: 0;
+     overflow: hidden;
+     transition: all 0.35s;
+ }
+
+ .tab input:checked~.tab__content {
+     max-height: 10rem;
  }
 
  .accordion {
-     margin: 100 auto;
-     width: 600px;
- }
-
- .accordion li {
-     width: 100%;
-     margin-bottom: 10px;
-     background-color: #fff;
-     padding: 10px;
-     border-radius: 4px;
- }
-
- .accordion li label {
-     padding: 10px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     font-size: 18px;
-     font-weight: 500;
-     cursor: pointer;
-     color: #c20000;
- }
-
- .accordion li label span {
-     transform: rotate(90deg);
-     font-size: 22px;
-     color: #333;
- }
-
- .accordion label+input[type="radio"] {
-     display: none;
- }
-
- .accordion .content {
-     padding: 0 10px;
-     line-height: 26px;
-     max-height: 0px;
      overflow: hidden;
-     transition: max-height 0.5s;
+     padding-bottom: 162px;
  }
 
- .accordion label+input[type="radio"]:checked+.content {
-     max-height: 400px;
- }
-
- /* 
- .comparisons {
-     font-family: "Helvetica", sans-serif;
-     font-size: 48px;
-     font-weight: 400;
-     line-height: 52.8px;
-     color: var(--Deep-Blue, rgba(0, 23, 31, 1));
-     max-width: 456px;
- }
-
- .utility {
-     max-width: 700px;
-     margin-top: 2rem;
-     padding: 14px;
-     border-radius: 4px;
-     border: 1px solid rgba(0, 0, 0, 0.1);
-     box-shadow: 0px 0px 13.9px 0px rgba(0, 0, 0, 0.1);
+ .tab__label,
+ .tab__close {
+     display: flex;
+     color: white;
+     background: var(--theme);
      cursor: pointer;
  }
 
- .topics {
-     display: flex;
-     align-items: center;
+ .tab__label {
      justify-content: space-between;
- }
-
- .plan {
      font-family: "Helvetica", sans-serif;
      font-size: 24px;
      font-weight: 400;
      line-height: 26.4px;
-     color: var(--Deep-Blue, rgba(0, 23, 31, 1));
      opacity: 90%;
+     color: var(--Deep-Blue, rgba(0, 23, 31, 1));
+     padding-left: 86px;
  }
-.meaning{
-    max-height: 0;
-    overflow: hidden;
-}
- .whether {
+
+ .tab__label::after {
+     content: "\276F";
+     width: 1em;
+     height: 1em;
+     text-align: center;
+     transform: rotate(90deg);
+     transition: all 0.35s;
+ }
+
+ .tab input:checked+.tab__label::after {
+     transform: rotate(270deg);
+ }
+
+ .tab__content p {
+     margin: 0;
+     padding-top: 8px;
      font-family: "Helvetica", sans-serif;
      font-size: 16px;
      font-weight: 400;
      line-height: 25.6px;
      color: var(--Deep-Blue, rgba(0, 23, 31, 1));
      opacity: 90%;
-     padding-top: 8px;
+     padding-left: 86px;
  }
-.utility.active .meaning{
-    max-height: 300px;
-} */
+
+ .tab__close {
+     justify-content: flex-end;
+     padding: 0.5rem 1rem;
+     font-size: 0.75rem;
+ }
+
+ .accordion--radio {
+     --theme: var(--secondary);
+ }
+
+ /* Arrow animation */
+ .tab input:not(:checked)+.tab__label:hover::after {
+     animation: bounce .5s infinite;
+ }
+
+ @keyframes bounce {
+     25% {
+         transform: rotate(90deg) translate(.25rem);
+     }
+
+     75% {
+         transform: rotate(90deg) translate(-.25rem);
+     }
+ }
+
+
+
+
+
+
+ /* overflow-section */
+ /* .overflow-section {
+     max-width: 1920px;
+     height: 661px;
+     background: rgba(234, 249, 255, 0.94);
+     margin-bottom: 40px; */
+ /* background: url(../image/png/Card\ \(2\).png);
+     /* background-size: cover; 
+     /* background-position: center;
+     /* position: relative;
+     overflow: hidden;
+     margin-bottom: 40px;
+     background: url(../image/png/Card\ \(2\).png);
+     background-size: cover;
+     background-position: center;
+     position: relative;
+     z-index: 2; */
+ /* }
+ .card-section{
+    background-image: url(../image/png/Card\ \(2\).png);
+    height: 661px;
+    width: 360px;
+    /* background-size: cover;
+    background-repeat: no-repeat;
+ }
+ /*
+ .overflow-section::after {
+      background: url(../image/png/Card\ \(2\).png);
+     background: rgba(234, 249, 255, 0.94);
+ }
+
+ .overflow-section:hover {
+     background: url(../image/png/Card\ \(2\).png);
+     background-size: cover;
+ }
+
+ .overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     /* background: rgba(234, 249, 255, 0.94); 
+     z-index: 2;
+     position: relative;
+ }
+*/
  /* media quary */
  @media(min-width:992px) {
+     .simple-section {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
      .col-lg-4 {
          width: 33.33%;
          padding-left: 12px;
@@ -826,9 +890,9 @@
  }
 
  @media (max-width:992px) {
-     .container {
+     /* .container {
          flex-direction: column;
-     }
+     } */
 
      .sub-heading {
          color: white;
@@ -841,7 +905,7 @@
      .logo-section {
          overflow: auto;
          white-space: nowrap;
-         margin-top: 71px;
+         margin-top: 30px;
      }
 
      input[type="text"][id="text"] {
