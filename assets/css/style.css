@@ -889,7 +889,9 @@
      color: var(--Deep-Blue, rgba(0, 23, 31, 1));
 
  }
-
+.paragraph{
+    
+}
  /* media quary */
 
  @media(min-width:992px) {
